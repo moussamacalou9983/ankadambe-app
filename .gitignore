@@ -1,0 +1,12 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+.npm-cache/
+*.log
+node_modules/
+.next/

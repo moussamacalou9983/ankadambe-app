@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --sand: #fcfaf5;
+  --paper: #fffdf7;
+  --ink: #1f1a16;
+  --muted: #6b5b4f;
+  --ochre: #d49a26;
+  --clay: #c86a2b;
+  --earth: #5c3b22;
+
+  --font-stack-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-stack-display: "Palatino Linotype", "Book Antiqua", Palatino, Georgia,
+    serif;
+
+  --background: var(--sand);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sand: var(--sand);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-ochre: var(--ochre);
+  --color-clay: var(--clay);
+  --color-earth: var(--earth);
+
+  --font-sans: var(--font-stack-sans);
+  --font-display: var(--font-stack-display);
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .bg-loom {
+    background-image: radial-gradient(
+        1200px 600px at 20% 0%,
+        rgba(212, 154, 38, 0.18),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 500px at 85% 10%,
+        rgba(200, 106, 43, 0.12),
+        transparent 55%
+      ),
+      linear-gradient(to bottom, var(--sand), var(--paper));
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
